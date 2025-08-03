@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Renuvo App Downloads</title>
+    <style>
+    </style>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<script>
+</script>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Renuvo Applications</h1>
+            <p>Bringing Ideas to Life, One App at a Time.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="app-list">
+
+                <article class="app">
+                    <img src="images/logo(rounded).png" alt="QR Code Generator" />
+                    <h2>QR Code Generator</h2>
+                    <p>Generate QR Codes.</p>
+                    <button onclick="downloadAPK('10YD6omx27CWUHBpYPGxM4DvtrpnnTa7i', 'QRCodeGenerator.apk')"
+                        class="btn">Download</button>
+                    <p class="last-updated">Last updated:August 3rd 2025</p>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Renuvo. All rights reserved. Made by Mr. Fabien.</p>
+        </div>
+    </footer>
+
+    <script>
+        function downloadAPK(fileId, fileName) {
+            const url = `https://drive.google.com/uc?export=download&id=${fileId}`;
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+
+</html>
